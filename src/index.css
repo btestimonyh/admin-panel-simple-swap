@@ -1,0 +1,190 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: local('Inter-Medium'), local('Inter-Medium'),
+    url('/fonts/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: local('Inter-Bold'), local('Inter-Bold'),
+    url('/fonts/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: local('Inter-SemiBold'), local('Inter-SemiBold'),
+    url('/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter-Light';
+  src: local('Inter-Light'), local('Inter-Light'),
+    url('/fonts/Inter-Light.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  font-family: 'Inter-Medium', sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+
+
+  color-scheme: light dark;
+  color: #FFFFFF;
+  background-color: #062763;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+input {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 24px;
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+h4 {
+  font-family: 'Inter-Bold', sans-serif;
+  color: rgb(133, 154, 181);
+}
+
+#loyalty-block {
+  background-image: url('/images/bg-for-loyalty.png');
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+  #loyalty-block {
+    background-image: url('/images/bg-for-loyalty-mob.png');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #loyalty-block {
+    background-image: none;
+  }
+}
+
+*{
+  scroll-behavior: smooth;
+}
+section {
+  overflow-x: hidden;
+}
+
+#main-info {
+  background-image: url('/images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#contacts {
+  background-image: url('/images/bg-contacts.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  animation: move 10s linear infinite;
+  /* Анімація переміщення */
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.skewing {
+  transform: skewX(23deg);
+}
+
+.skewing-r {
+  transform: skewX(-23deg);
+}
+
+input {
+  background: inherit;
+  border: none;
+  border-radius: 0px;
+  font-size: 18px;
+  color: rgb(37, 44, 68);
+  font-family: 'Inter-SemiBold', serif;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="checkbox"]:not(:checked) {
+  background: inherit!important /* приклад стилю */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 768px) {
+  input {
+    font-size: 13px;
+  }
+}
+
+.custom-file-upload {
+  position: relative;
+  display: inline-block;
+  color: white;
+  border: none;
+  /* padding: 4px 10px; */
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+input[type="file"] {
+  position: absolute;
+  /* font-size: 999px; */
+  opacity: 0;
+}
