@@ -14,7 +14,6 @@ const ChatBox = () => {
             fetch(getRequestPath)
                 .then(res => res.json())
                 .then(data => setUsers(data))
-            console.log(users)
         } catch (error) {
             setError(error);
         } finally {
